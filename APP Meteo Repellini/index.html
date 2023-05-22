@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prova weather app - Tutorial</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="search">
+            <input type="text" placeholder="inserisci il nome di una città" spellcheck="false">
+            <button id="lente"><img src="immagini/lente.png" alt="icona lente"></button>
+            <div>Dark mode:</div>
+            <label id="toggleDarkMode" class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <a id="login" href="login.html">Login</a>
+            <a id="registrati" href="registrati.html">Registrati</a>
+        </div>
+        <div class="errore">
+            <p>nome inserito non valido</p>
+        </div>
+        <div class="errore2">
+            <p>inserimento vuoto</p>
+        </div>
+    </header>
+
+    <!-- Carousel -->
+    <div id="meteoCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicatori di direzione -->
+        <ul class="carousel-indicators">
+            <li data-target="#meteoCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#meteoCarousel" data-slide-to="1"></li>
+            <li data-target="#meteoCarousel" data-slide-to="2"></li>
+        </ul>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <!-- Meteo attuale -->
+            <div class="carousel-item active" id="meteoAttuale">
+                <div class="carousel-caption">
+                    <img src="immagini/pioggia.png" class="meteo-icon" alt="icona meteo oggi">
+                    <h1 class="temperatura"></h1>
+                    <h2 class="citta"></h2>
+                    <h3>condizioni meteo attuali</h3>
+                    <div class="dettagli">
+                        <div class="col">
+                            <img src="immagini/umidita.png" alt="icona umidità">
+                            <div>
+                                <p class="umidita"></p>
+                                <p>Umidità</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="immagini/vento.png" alt="icona vento">
+                            <div>
+                                <p class="vento"></p>
+                                <p>Velocità del vento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Previsioni per Domani -->
+            <div class="carousel-item" id="previsioniDomani">
+                <div class="carousel-caption">
+                    <img src="immagini/pioggia.png" class="meteo-icon" alt="icona meteo domani">
+                    <h1 class="temperatura"></h1>
+                    <h2 class="citta"></h2>
+                    <h3>previsioni per domani</h3>
+                    <div class="dettagli">
+                        <div class="col">
+                            <img src="immagini/umidita.png" alt="icona umidità">
+                            <div>
+                                <p class="umidita"></p>
+                                <p>Umidità</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="immagini/vento.png" alt="icona vento">
+                            <div>
+                                <p class="vento"></p>
+                                <p>Velocità del vento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Previsioni per la dopo domani -->
+            <div class="carousel-item" id="previsioniDopoDomani">
+                <div class="carousel-caption">
+                    <img src="immagini/pioggia.png" alt="icona meteo dopodomani" class="meteo-icon">
+                    <h1 class="temperatura"></h1>
+                    <h2 class="citta"></h2>
+                    <h3>previsioni per dopodomani</h3>
+                    <div class="dettagli">
+                        <div class="col">
+                            <img src="immagini/umidita.png" alt="icona umidità">
+                            <div>
+                                <p class="umidita"></p>
+                                <p>Umidità</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="immagini/vento.png" alt="icona vento">
+                            <div>
+                                <p class="vento"></p>
+                                <p>Velocità del vento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Controlli -->
+        <a class="carousel-control-prev" href="#meteoCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#meteoCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="darkmode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
