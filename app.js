@@ -12,6 +12,15 @@ const meteoIconDomani = document.getElementsByClassName("meteo-icon")[1];
 const meteoIconDopoDomani = document.getElementsByClassName("meteo-icon")[2];
 // oppure querySelectorAll
 
+document.addEventListener("DOMContentLoaded", (event) => {
+    document.querySelector("#meteoAttuale").style.backgroundImage = "url(https://source.unsplash.com/random?index=1)";
+    document.querySelector("#previsioniDomani").style.backgroundImage = "url(https://source.unsplash.com/random?index=2)";
+    document.querySelector("#previsioniDopoDomani").style.backgroundImage = "url(https://source.unsplash.com/random?index=4)";
+
+    document.querySelector("#meteoCarousel").style.display = "block";
+
+});
+
 async function controllaMeteo(citta) {
     const response1 = await fetch(CURRENT_WEATHER_API_URL + citta);
     const response2 = await fetch(FORECAST_API_URL + citta);
